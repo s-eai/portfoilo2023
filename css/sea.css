@@ -1,0 +1,1157 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'CWDangamAsac-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/CWDangamAsac-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'GmarketSansMedium';
+}
+body {
+    overflow : hidden;
+    background : black;
+}
+::-webkit-scrollbar {
+    width : 0px;
+}
+::selection {
+    background : darkslateblue;
+    color : white;
+}
+
+a {
+    display : inline-block;
+    text-decoration : none;
+    color : black;
+}
+ol, ul {
+    list-style : none;
+}
+/* < 레이아웃 > */
+#layout {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overflow-x : hidden;
+    height : 100vh;
+    width : 100vw;
+    /* width : 1400px; */
+    margin: 0 auto;
+}
+/* < 사이드 버튼 > */
+#side {
+    width : 180px;
+    height : 100vh;
+
+    position : fixed;
+    z-index : 10;
+    right : 20px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    display : none;
+}
+#side li {
+    width : 160px;
+    margin-bottom : 20px;
+    
+    display : flex;
+    align-items: center;    
+    justify-content: end;
+}
+#side .side-txt {
+    flex : 1;
+    height : 10px;
+    text-align: right;
+    font-size : 0.8rem;
+    color : white;
+    margin-top : -5px;
+
+    text-shadow: 0 0 30px slateblue;
+
+    cursor: default;
+    display : none;
+}
+#side .circle {
+    width : 10px;
+    height : 10px;
+    background : slateblue;
+    border-radius : 50%;
+    margin-left : 10px;
+}
+#side a.click {
+    background: white !important;
+    box-shadow: 0 0 10px slateblue;
+}
+/* < 팝업메뉴 #sea > */
+#sea {
+    width : 300px;
+    height : 350px;
+
+    position : fixed;
+    top : 30px;
+    left : 25px;
+
+    z-index: 10;
+    display : none;
+}
+#sea-btn {
+    cursor: pointer;
+}
+#sea-menu {
+    width : 300px;
+    background: white;
+
+    border-radius: 15px;
+
+    position : fixed;
+    top : 130px;
+    left : 25px;
+
+    display : none;
+}
+#sea-menu ul {
+    list-style: none;
+    padding :  20px;
+}
+#sea-menu li:not(:last-child) {
+    margin-bottom : 5px;
+}
+#sea-menu li a {
+    display : block;
+    width : 100%;
+    padding : 5px 3px 3px;
+
+    color : darkslateblue;
+
+    transition : 0.3s ease-in;
+}
+#sea-menu li a:hover  {
+    padding-left : 10px;
+    background: darkslateblue;
+    color : white;
+}
+/* < 메인 > */
+#M {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    position : relative;
+    cursor : default;
+
+    padding : 20px 0;
+
+    background: black;
+    color : slateblue;
+    text-align: center;    
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction : column;
+}
+#M h1 {
+    font-family: 'CWDangamAsac-Bold';
+    letter-spacing: 5pt;
+    font-size : 8rem;
+
+    perspective: 200px;
+}
+#M p {
+    font-family: 'GmarketSansBold';
+    letter-spacing: 3pt;
+    font-size : 1.5rem;
+}
+#M h1 span {
+    display : inline-block;
+    transform-origin : 0% 80%;
+}
+#M h1 span:not(:first-child) {
+    margin-left : -25px;
+}
+
+#M h1 span:nth-child(1) {
+    animation : filp 1s ease-in both, fadeIn 1s both;
+}
+#M h1 span:nth-child(2) {
+    animation : filp 1s ease-in both .2s , fadeIn 1s both;
+}
+#M h1 span:nth-child(3) {
+   animation : filp 1s ease-in both .4s , fadeIn 1s both;    
+}
+#M h1 span:nth-child(4) {
+    animation : filp 1s ease-in both .6s , fadeIn 1s both;
+}
+#M h1 span:nth-child(5) {
+    animation : filp 1s ease-in both .8s , fadeIn 1s both;
+}
+#M h1 span:nth-child(6) {
+    animation : filp 1s ease-in both 1.0s , fadeIn 1s both;
+}
+#M h1 span:nth-child(7) {
+    animation : filp 1s ease-in both 1.2s , fadeIn 1s both;
+}
+#M h1 span:nth-child(8) {
+    animation : filp 1s ease-in both 1.4s , fadeIn 1s both;
+}
+@keyframes filp {
+    from { transform: rotateX(90deg); }
+    to { transform: rotateX(0deg); }
+}
+
+@keyframes fadeIn {
+    from { opacity : 0 };
+    to { opacity : 1 };
+}
+#M > a {
+    width : 100%;
+
+    position : absolute;
+    bottom : 30px;
+    left : 0;
+
+    letter-spacing: 0;
+    text-align: center;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#M > a span {
+    display : block;
+
+    width : 10px;
+    height : 10px;
+    background: slateblue;
+    border-radius: 50%;
+    
+    color : #6a5acd;
+}
+/* < 어바웃 > */
+#A {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    background: darkslateblue;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+#A > h2 {
+    display : inline-block;
+    position : absolute;
+    top : 62px;
+    left : 350px;
+    padding : 5px 15px;
+
+    font-family: 'GmarketSansBold';
+    
+    border-left : 15px solid black;
+    border-right : 15px solid black;
+
+    background: white;
+    color : black;
+    cursor: default;
+}
+#A > div {
+    /* width : 1350px; */
+    height : 100vh;
+
+    padding : 40px;
+
+    display : flex;
+    align-items: end;
+    justify-content: space-between;
+}
+#about {
+    width : 420px;
+    height : 620px;
+
+    background: rgba( 255 255 255 / 0.8);
+    border-radius : 25px;
+    overflow: hidden;
+    box-shadow : 0 0 10px rgba(255 255 255 / 0.3);
+    margin-right : 10px;
+
+    text-align: center;
+}
+#about h2 {
+    padding : 10px;
+
+    font-family: 'GmarketSansBold';
+    text-align: center;
+    font-weight: normal;
+    color : white;
+    letter-spacing: 2px;
+
+    background: slateblue;
+}
+#about img {
+    width : 75%;
+    margin-top : 50px;
+}
+#about h3 {
+    margin : 50px 0;
+}
+#about a:hover {
+    padding-bottom : 0.1pt;
+    border-bottom  : 0.5pt solid darkslateblue;
+    font-style : italic;
+    font-weight: bold;
+    color : darkslateblue;
+}
+/* --- */
+#ab-info {
+    height : 100vh;
+
+    display : flex;
+    align-items: center;
+    margin-left : 40px;
+
+    cursor: default;
+}
+#ab-info > div > section {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255 255 255 / 0.55);
+
+    overflow: hidden;
+}
+#ab-info > div > section h2 {
+    padding : 10px;
+
+    font-family: 'GmarketSansBold';
+    text-align: center;
+    font-weight: normal;
+    color : white;
+    letter-spacing: 2px;
+
+    background: slateblue;
+}
+/* --- */
+#left {
+    width : 400px;
+    height: 100vh;
+    margin-right : 40px;
+
+    display : flex;
+    justify-content: end;
+    flex-direction : column;
+}
+#profile {
+    height : 300px;
+    background: rgba( 255 255 255 / 0.8);
+    margin-bottom: 30px;
+}
+#profile div {
+    display : flex;
+    align-items: center;
+
+    padding : 30px;
+}
+#profile li {
+    width : 100%;
+    padding : 5px 0 3px 10px;
+    margin-top : 10px;
+
+    border-left : 4px solid black;
+}
+#info {
+    height : 500px;
+    background: rgba( 255 255 255 / 0.8);
+}
+#info div {
+    display : flex;
+    justify-content: center;    
+    flex-direction : column;
+
+    padding : 30px;
+}
+#info h3 {
+    margin-bottom : 10px;
+}
+#info li {
+    width : 100%;
+    padding : 5px 0 3px 10px;
+    margin-top : 15px;
+
+    border-left : 4px solid black;
+
+    display : flex;
+}
+#info span {
+    display : block;
+}
+#info .date {
+    flex : 0.35;
+}
+#info li span:last-of-type {
+    flex : 0.65;
+}
+#info ul:last-of-type {
+    margin-top : 50px;
+}
+/* --- */
+#right {
+    width : 400px;
+    height : 100vh;
+
+    display : flex;
+    justify-content: end;
+    flex-direction : column;
+}
+#skill {
+    height : 500px;
+    background: rgba( 255 255 255 / 0.8);
+    margin-bottom: 30px;
+}
+#progress {
+    padding : 30px;
+}
+#progress > div {
+    width : 300px;
+    height : 50px;
+
+    margin : 0 auto;
+    text-align: center;
+
+    display : flex;
+    flex-direction: column;
+}
+#progress > div:not(:last-of-type) {
+    margin-bottom : 15px;
+}
+#progress > div label {
+    flex : 0.35;
+
+    font-size : .95rem;
+    margin-bottom : 5px;
+}
+#progress > div progress {
+    flex : 0.65;
+    width : 100%;
+
+    appearance: none;
+}
+#progress ::-webkit-progress-bar {
+    background: white;
+    border-radius : 50px;
+    overflow : hidden;
+}
+#progress ::-webkit-progress-value {
+    background: darkslateblue;
+}
+/* --- */
+#resume {
+    height: 300px;
+    background: rgba( 255 255 255 / 0.8);
+}
+#resume div {
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    padding : 30px;
+}
+#resume a {
+    width : 160px;
+    height : 190px;
+
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+}
+#resume a:first-of-type {
+    margin-right : 20px;
+}
+#resume a:last-of-type {
+    position: relative;
+    z-index: 11;
+}
+#resume a img {
+    width : 160px;
+    height : 160px;
+}
+#resume a span {
+    display: block;
+    width : 160px;
+    margin-top : 5px;
+}
+#resume a:hover span {
+    background: darkslateblue;
+    color : white;
+}
+/* < 웹사이트 > */
+#W1 {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    background: black;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: default;
+    position :relative;
+}
+#W1 h2 {
+    display : inline-block;
+    position : absolute;
+    top : 62px;
+    left : 350px;
+    padding : 5px 15px;
+
+    font-family: 'GmarketSansBold';
+    
+    border-left : 15px solid darkslateblue;
+    border-right : 15px solid darkslateblue;
+
+    background: white;
+    color : darkslateblue;
+}
+#W1 .background {
+    width : 1350px;
+    height : 650px;
+    overflow : hidden;
+
+    background: rgba( 255 255 255 / 0.85);
+    border-radius : 40px;
+
+    padding : 0 25px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#W1 .web-img {
+    width : 800px;
+    height : 600px;
+    overflow : hidden;
+
+    border-radius : 20px;
+}
+#W1 .web-img img {
+    position : relative;
+    left : -1000px;
+    opacity : 0;
+    transition : ease-in 1s;
+}
+#W1 .web-info {
+    width : 475px;
+    margin-left : 25px;
+
+    position : relative;
+    right : -500px;
+    opacity : 0;
+    transition : ease-in 1.3s;
+}
+#W1 .web-info h3 {
+    font-size : 2rem;
+    line-height : 70%;
+
+    padding-left : 8px;
+}
+#W1 .web-info p {
+    font-size : 1.3rem;
+
+    padding-left : 12px;
+}
+#W1 .web-info hr {
+    width : 100%;
+    border-top : 2px solid black;
+    margin : 15px 0;
+}
+#W1 .web-info ul {
+    padding-left : 5px;    
+}
+#W1 .web-info ul li {
+    display : flex;
+
+    padding : 5px 0 3px;
+    margin-bottom : 8px;
+
+    font-size : 0.95rem;
+}
+#W1 .web-info ul li b {
+    flex : 0.2;
+    padding-left : 10px;
+    border-left : 3px solid black;
+}
+#W1 .web-info ul li span {
+    flex : 0.8;
+}
+#W1 .web-info ul li:nth-child(3) span {
+    line-height : 160%;
+}
+#W1  .web-btn {
+    width : 475px;
+
+    display : flex;
+    align-items : center;
+    justify-content : center;
+
+    text-align : center;
+
+    padding : 0 30px;
+    margin-top : 30px;
+    /* background: tan; */
+}
+#W1  .web-btn a {
+    display : block;
+    background: white;
+
+    color : darkslateblue;
+    font-family: 'GmarketSansBold';
+    letter-spacing: 2px;
+    padding : 7px 30px 5px;
+
+    border-radius : 50px;
+}
+#W1  .web-btn a:last-child {
+    margin-left : 15px;
+}
+#W1  .web-btn a:hover {
+    background : darkslateblue;
+    color : white;
+}
+/* ---------- */
+#W2 {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    background: darkslateblue;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: default;
+    position :relative;
+}
+#W2 h2 {
+    display : inline-block;
+    position : absolute;
+    top : 62px;
+    left : 350px;
+    padding : 5px 15px;
+
+    font-family: 'GmarketSansBold';
+    
+    border-left : 15px solid black;
+    border-right : 15px solid black;
+
+    background: white;
+    color : black;
+}
+#W2 .background {
+    width : 1350px;
+    height : 650px;
+    overflow : hidden;
+
+    background: rgba( 255 255 255 / 0.85);
+    border-radius : 40px;
+
+    padding : 0 25px;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#W2 .web-img {
+    width : 800px !important;
+    height : 600px;
+    overflow : hidden;
+
+    border-radius : 20px;
+}
+#W2 .web-img img {
+    width : 800px !important;
+    height : 600px;
+
+    position : relative;
+    top : -800px;
+    opacity : 0;
+    transition : ease-in 1s;
+}
+#W2 .web-info {
+    width : 475px;
+    margin-left : 25px;
+
+    position : relative;
+    bottom : -800px;
+    opacity : 0;
+    transition : ease-in 1.3s;
+}
+#W2 .web-info h3 {
+    font-size : 2rem;
+    line-height : 70%;
+
+    padding-left : 8px;
+}
+#W2 .web-info p {
+    font-size : 1.3rem;
+
+    padding-left : 12px;
+}
+#W2 .web-info hr {
+    width : 100%;
+    border-top : 2px solid black;
+    margin : 15px 0;
+}
+#W2 .web-info ul {
+    padding-left : 5px;    
+}
+#W2 .web-info ul li {
+    display : flex;
+
+    padding : 5px 0 3px;
+    margin-bottom : 8px;
+
+    font-size : 0.95rem;
+}
+#W2 .web-info ul li b {
+    flex : 0.2;
+    padding-left : 10px;
+    border-left : 3px solid black;
+}
+#W2 .web-info ul li span {
+    flex : 0.8;
+}
+#W2 .web-info ul li:nth-child(3) span {
+    line-height : 160%;
+}
+#W2  .web-btn {
+    width : 475px;
+
+    display : flex;
+    align-items : center;
+    justify-content : center;
+
+    text-align : center;
+
+    padding : 0 30px;
+    margin-top : 30px;
+    /* background: tan; */
+}
+#W2  .web-btn a {
+    display : block;
+    background: white;
+
+    color : black;
+    font-family: 'GmarketSansBold';
+    letter-spacing: 2px;
+    padding : 7px 30px 5px;
+
+    border-radius : 50px;
+}
+#W2  .web-btn a:last-child {
+    margin-left : 15px;
+}
+#W2  .web-btn a:hover {
+    background : black;
+    color : white;
+}
+/* < 디테일 디자인 > */
+#D {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    background: black;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    position :relative;
+}
+#D h2 {
+    display : inline-block;
+    position : absolute;
+    top : 62px;
+    left : 350px;
+    padding : 5px 15px;
+
+    font-family: 'GmarketSansBold';
+    
+    border-left : 15px solid darkslateblue;
+    border-right : 15px solid darkslateblue;
+
+    background: white;
+    color : darkslateblue;
+
+    cursor: default;
+}
+#D .background {
+    width : 750px;
+    height : 600px;
+    background: tan;
+
+    position : relative;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow : 0 0 150px rgba(255 255 255 / 0.6);
+}
+#D button {
+    display : block;
+    cursor : pointer;
+}
+#big {
+    width : 600px;
+    height : 600px;
+}
+#big button {
+    width : 600px;
+    height : 600px;
+}
+#big button img {
+    width : 100%;
+}
+#big #d-info {
+    position : absolute;
+    top : 0;  left : 0;
+
+    width : 600px;
+    height : 600px;
+    margin : 0 auto;
+    background: rgba(0 0 0 / 0.7);
+    
+    display : none;
+}
+#d-info span.material-symbols-outlined {
+    color : white !important;
+    font-size : 2.5rem;
+}
+#d-info span:last-child {
+    display : block;
+    color : white;
+    font-size: 1.15rem;
+
+    font-family: 'GmarketSansMedium';
+    letter-spacing: 1px;
+}
+#small {
+    width : 150px;
+    height : 600px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#small button {
+    height : 150px;
+}
+#small button img {
+    width : 150px;
+    height : 150px;
+}
+/* < 이벤트 디자인 > */
+#E {
+    scroll-snap-align: start;
+    height : 100vh;
+    width : 100vw;
+    background: darkslateblue;
+
+    position : relative;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#E h2 {
+    display : inline-block;
+    position : absolute;
+    top : 62px;
+    left : 350px;
+    padding : 5px 15px;
+
+    font-family: 'GmarketSansBold';
+    
+    border-left : 15px solid black;
+    border-right : 15px solid black;
+
+    background: white;
+    color : black;
+
+    cursor: default;
+}
+#E .background {
+    width : 1000px;
+    height : 800px;    
+    margin-top : 110px;
+
+    display : flex;
+    justify-content: space-evenly;
+}
+#e-web {
+    width : 410px;
+    height : 800px;
+
+    background: rgba( 255 255 255 / 0.8 );
+    border-radius : 20px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#e-web h3 {
+    width : 100%;
+    height : 40px;
+
+    font-family: 'GmarketSansBold';
+    font-size : 1.5rem;
+    padding-top : 1px;
+    text-align: center;
+    color : rgb(164, 151, 248);
+    background: black;
+
+    border-radius : 20px 20px 0 0;
+
+    cursor: default;
+}
+#e-web-slider {
+    width : 100%;
+    height : 760px;
+    overflow: hidden;
+}
+#e-web-slide {
+    width : 100%;
+    height : 1900px;
+    padding : 0 30px;
+
+    position : relative;
+    top : -555px;
+}
+.e-web-slide-img {
+    width : 350px;
+    height : 350px;
+
+    margin-top : 30px;
+
+    position : relative;
+    cursor : pointer;
+}
+.e-web-slide-img img {
+    width : 350px;
+    height : 350px;
+}
+.e-web-slide-img .event-info {
+    display : block;
+    width : 100%;
+    height : 100%;
+
+    position : absolute;
+    top : 0;
+    left : 0;
+
+    background: rgba(0 0 0 / 0.7);
+    cursor : pointer;
+
+    display : none;
+}
+.event-info span { /* web과 sns 전부 통일된 스타일값 */
+    display : block;
+    color : white !important ;
+
+    font-size : 2rem;
+    font-weight : bold;
+}
+.event-info span:last-child {
+    font-size : 1.2rem;
+    margin-top : 3px;
+}
+
+#e-sns {
+    width : 410px;
+    height : 800px;
+
+    background: rgba( 255 255 255 / 0.8 );
+    border-radius : 20px;
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+#e-sns h3 {
+    width : 100%;
+    height : 40px;
+
+    padding-top : 1px;
+    font-family: 'GmarketSansBold';
+    font-size : 1.5rem;
+    text-align: center;
+    color : slateblue;
+    color : rgb(164, 151, 248);
+    background: black;
+
+    border-radius :  0 0 20px 20px;
+
+    cursor: default;
+}
+#e-sns-slider {
+    width : 100%;
+    height : 760px;
+    overflow: hidden;
+}
+#e-sns-slide {
+    width : 100%;
+    height : 1900px;
+    padding : 0 30px;
+
+    position : relative;
+    top : -205px;
+}
+.e-sns-slide-img {
+    width : 350px;
+    height : 350px;
+
+    margin-top : 30px;
+
+    position : relative;
+    cursor : pointer;
+}
+.e-sns-slide-img img {
+    width : 350px;
+    height : 350px;
+}
+.e-sns-slide-img .event-info {
+    display : block;
+    width : 100%;
+    height : 100%;
+
+    position : absolute;
+    top : 0;
+    left : 0;
+
+    background: rgba(0 0 0 / 0.7);
+    cursor : pointer;
+
+    display : none;
+}
+
+/* < 풋터 / 하단 > */
+#F {
+    scroll-snap-align: start;
+    height : 15vh;    
+    width : 100vw;
+    background: black;
+    cursor : default; 
+
+    color : rgb(132, 113, 255);
+
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#F ul {
+    list-style: none;
+}
+#F li {
+    /* width : 200px; */
+    text-align: center;
+    /* background: white; */
+}
+#F a {
+    color : rgb(132, 113, 255);
+}
+#F a:hover {
+    font-style: italic;
+    text-decoration : underline;
+}
+/* < 큰 이미지 > */
+#B {
+    position : absolute;
+    top : 0; 
+    left : 0;
+
+    width : 100%;
+    height : 100vh;
+    background: rgba(0,0,0,0.85);
+    display : none;
+}
+#b-img {
+    width : 100%;
+
+    /* background: rgba(0,0,0,0.85); */
+    background: #000;
+    position: relative;
+    z-index: 1;
+
+    display : flex;
+    align-items: center;
+}
+#B #b-img img {
+    display : block;
+    margin : 0 auto;
+    width : 70%;
+}
+#b-info {
+    position : fixed;
+    top : 0;
+    width : 100%;
+    height : 100px;
+    background: #000;
+    z-index: 15;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#b-info  h4 {
+    flex : 0.95;
+    color : white;
+    font-size : 2rem;
+    margin : 25pt 0;
+    text-align: center;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+#b-btn.material-symbols-outlined {
+    flex : 0.05;
+    color : white;
+    background: none;
+    font-size : 4rem;
+    width : 100px;
+    height : 100px;
+    position : absolute;
+    top : 0;
+    right : 10pt;
+}
