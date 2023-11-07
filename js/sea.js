@@ -489,9 +489,11 @@ $(document).ready(function(){
             clearInterval ( ewSwipeL );
             clearInterval ( ewSwipeR );
             clearInterval( ewSlideM );
+            $("#layout").css("overflow-y" , "hidden" );
             $("#e-web-slide").stop().animate( { left : "-435px"} , 50, function(){
                 $("#e-web-slide").append( $("#e-web-slide").children().first() );
                 $("#e-web-slide").css( "left" , "-265px" );
+                $("#layout").css("overflow-y" , "auto" );
                 ewSlideM = setInterval ( ewSlideDownM , 3500 );
             });
         } // web left swipe
@@ -500,9 +502,11 @@ $(document).ready(function(){
             clearInterval ( ewSwipeR );
             clearInterval ( ewSwipeL );
             clearInterval( ewSlideM );
+            $("#layout").css("overflow-y" , "hidden" );
             $("#e-web-slide").stop().animate( { left : "-95px" }, 50, function(){
                 $("#e-web-slide").prepend( $("#e-web-slide").children().last() );
                 $("#e-web-slide").css( "left" , "-265px" );
+                $("#layout").css("overflow-y" , "auto" );
                 ewSlideM = setInterval ( ewSlideDownM , 3500 );
             });
         }
@@ -521,9 +525,11 @@ $(document).ready(function(){
             clearInterval ( esSwipeL );
             clearInterval ( esSwipeR );
             clearInterval( esSlideM );
+            $("#layout").css("overflow-y" , "hidden" );
             $("#e-sns-slide").stop().animate( { left : "-265px"} , 50, function(){
                 $("#e-sns-slide").append( $("#e-sns-slide").children().first() );
                 $("#e-sns-slide").css( "left" , "-95px" );
+                $("#layout").css("overflow-y" , "auto" );
                 esSlideM = setInterval ( esSlideUpM , 3500 );
             });
         } // web left swipe
@@ -532,9 +538,11 @@ $(document).ready(function(){
             clearInterval ( esSwipeR );
             clearInterval ( esSwipeL );
             clearInterval( esSlideM );
+            $("#layout").css("overflow-y" , "hidden" );
             $("#e-sns-slide").stop().animate( { left : "-95px" }, 50, function(){
                 $("#e-sns-slide").prepend( $("#e-sns-slide").children().last() );
                 $("#e-sns-slide").css( "left" , "-265px" );
+                $("#layout").css("overflow-y" , "auto" );
                 esSlideM = setInterval ( esSlideUpM , 3500 );
             });
         }

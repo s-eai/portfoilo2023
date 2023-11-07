@@ -191,6 +191,9 @@
         top : 53.33px;
         border-radius: 0 0 10px 10px;
     }
+    #M {
+        scroll-snap-align: end;
+    }
     #M h1{
         font-size : 3rem;
     }
@@ -200,6 +203,8 @@
     #A {
         height : 1780px;
         align-items: start;
+
+        scroll-snap-align: end;
     }
     #A > h2 {
         display : block;
@@ -311,6 +316,7 @@
         height : 600px;
 
         height : 100vh;
+        scroll-snap-align: end;
     }
     #W1 h2 {
         display : block;
@@ -407,6 +413,7 @@
         height : 600px;
 
         height : 100vh;
+        scroll-snap-align: end;
     }
     #D h2 {
         display : block;
@@ -449,6 +456,7 @@
     #E {
         /* height : 600px; */
         height : 100vh;
+        scroll-snap-align: end;
     }
     #E h2 {
         display : block;
