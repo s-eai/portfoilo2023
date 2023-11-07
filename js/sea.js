@@ -49,110 +49,111 @@ $(document).ready(function(){
     const eTop = $("#E").offset().top;
     let scrollTop = 0;
 
-    $("#layout").scroll(function(){
-        scrollTop = $("#layout").scrollTop();
+    if ( winW > 750 ){
+        $("#layout").scroll(function(){
+            scrollTop = $("#layout").scrollTop();
 
-        if( scrollTop == mTop ){
-            $("#side").hide();
-            $("#sea").hide();
+            if( scrollTop == mTop ){
+                $("#side").hide();
+                $("#sea").hide();
 
-            $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
-            $("#W1 .web-info").css({ "right" : "-500px" , "opacity" : "0" });
-            $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
-            $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
-        }
-
-        if( scrollTop == aTop ){
-            $("#sea").show();
-
-            if( winW > 750 ){
-                $("#side").show().css( "display" , "flex" );
-                $("#side li p").hide();
-                $("#side li:nth-child(2) p").show();
-                $("#side li a").removeClass("click");
-                $("#side li:nth-child(2) a").addClass("click");
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-500px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
             }
 
-            $("#photoshop").delay(300).animate({ value : 93 });
-            $("#illustrator").delay(400).animate({ value : 85 });
-            $("#prototype").delay(500).animate({ value : 70 });
-            $("#html").delay(600).animate({ value : 90 });
-            $("#css").delay(700).animate({ value : 88 });
-            $("#jquery").delay(800).animate({ value : 96 });
+            if( scrollTop == aTop ){
+                $("#sea").show();
 
-            $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
-            $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
-            $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
-            $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
-        }
+                if( winW > 750 ){
+                    $("#side").show().css( "display" , "flex" );
+                    $("#side li p").hide();
+                    $("#side li:nth-child(2) p").show();
+                    $("#side li a").removeClass("click");
+                    $("#side li:nth-child(2) a").addClass("click");
+                }
 
-        if ( scrollTop == wTop ){
-            $("#sea").show();
+                $("#photoshop").delay(300).animate({ value : 93 });
+                $("#illustrator").delay(400).animate({ value : 85 });
+                $("#prototype").delay(500).animate({ value : 70 });
+                $("#html").delay(600).animate({ value : 90 });
+                $("#css").delay(700).animate({ value : 88 });
+                $("#jquery").delay(800).animate({ value : 96 });
 
-            if( winW > 750 ){
-                $("#side li p").hide();
-                $("#side li:nth-child(3) p").show();
-                $("#side li a").removeClass("click");
-                $("#side li:nth-child(3) a").addClass("click");
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
             }
 
-            $("#W1 img").css({ "left" : "0" , "opacity" : "1" });
-            $("#W1 .web-info").css({ "right" : "0" , "opacity" : "1" });
+            if ( scrollTop == wTop ){
+                $("#sea").show();
 
-            $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
-            $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
-        }
-        
-        if ( scrollTop == wwTop ){
-            $("#sea").show();
+                if( winW > 750 ){
+                    $("#side li p").hide();
+                    $("#side li:nth-child(3) p").show();
+                    $("#side li a").removeClass("click");
+                    $("#side li:nth-child(3) a").addClass("click");
+                }
 
-            if( winW > 750 ){
-                $("#side li p").hide();
-                $("#side li:nth-child(3) p").show();
-                $("#side li a").removeClass("click");
-                $("#side li:nth-child(3) a").addClass("click");
+                $("#W1 img").css({ "left" : "0" , "opacity" : "1" });
+                $("#W1 .web-info").css({ "right" : "0" , "opacity" : "1" });
+
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+            
+            if ( scrollTop == wwTop ){
+                $("#sea").show();
+
+                if( winW > 750 ){
+                    $("#side li p").hide();
+                    $("#side li:nth-child(3) p").show();
+                    $("#side li a").removeClass("click");
+                    $("#side li:nth-child(3) a").addClass("click");
+                }
+
+                $("#W2 img").css({ "top" : "0" , "opacity" : "1" });
+                $("#W2 .web-info").css({ "bottom" : "0" , "opacity" : "1" });
+
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
             }
 
-            $("#W2 img").css({ "top" : "0" , "opacity" : "1" });
-            $("#W2 .web-info").css({ "bottom" : "0" , "opacity" : "1" });
+            if ( scrollTop == dTop ){
+                $("#sea").show();
 
-            $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
-            $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
-        }
+                if( winW > 750 ){
+                    $("#side li p").hide();
+                    $("#side li:nth-child(4) p").show();
+                    $("#side li a").removeClass("click");
+                    $("#side li:nth-child(4) a").addClass("click");
+                }
 
-        if ( scrollTop == dTop ){
-            $("#sea").show();
-
-            if( winW > 750 ){
-                $("#side li p").hide();
-                $("#side li:nth-child(4) p").show();
-                $("#side li a").removeClass("click");
-                $("#side li:nth-child(4) a").addClass("click");
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
             }
 
-            $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
-            $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
-            $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
-            $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
-        }
+            if ( scrollTop == eTop ){
+                $("#sea").show();
 
-        if ( scrollTop == eTop ){
-            $("#sea").show();
+                if( winW > 750 ){
+                    $("#side li p").hide();
+                    $("#side li:nth-child(5) p").show();
+                    $("#side li a").removeClass("click");
+                    $("#side li:nth-child(5) a").addClass("click");
+                }
 
-            if( winW > 750 ){
-                $("#side li p").hide();
-                $("#side li:nth-child(5) p").show();
-                $("#side li a").removeClass("click");
-                $("#side li:nth-child(5) a").addClass("click");
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
             }
-
-            $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
-            $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
-            $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
-            $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
-        }
-    });
-
+        });
+    } 
     // < 사이드 버튼을 클릭 할 때 해당 버튼 색이 바뀌고 이름이 보인다 >
     $("#side a").click(function(){
         $("#side .side-txt").stop().fadeOut(300);
@@ -404,6 +405,81 @@ $(document).ready(function(){
   
 
     if( 360 <= winW && winW < 740 ){
+        const mTop = $("#M").offset().top;
+        const aTop = $("#A").offset().top;
+        const wTop = $("#W1").offset().top ; 
+        const wwTop = $("#W2").offset().top;
+        const dTop = $("#D").offset().top;
+        const eTop = $("#E").offset().top;
+        let scrollTop = 0;
+
+        $("#layout").scroll(function(){
+            scrollTop = $("#layout").scrollTop();
+    
+            if( scrollTop == mTop ){
+                $("#sea").hide();
+    
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-500px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+    
+            if( scrollTop == aTop ){
+                $("#sea").show();
+        
+                $("#photoshop").delay(2500).animate({ value : 93 });
+                $("#illustrator").delay(2600).animate({ value : 85 });
+                $("#prototype").delay(2700).animate({ value : 70 });
+                $("#html").delay(2800).animate({ value : 90 });
+                $("#css").delay(2900).animate({ value : 88 });
+                $("#jquery").delay(3000).animate({ value : 96 });
+    
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+    
+            if ( scrollTop == wTop ){
+                $("#sea").show();
+
+                $("#W1 img").css({ "left" : "0" , "opacity" : "1" });
+                $("#W1 .web-info").css({ "right" : "0" , "opacity" : "1" });
+    
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+            
+            if ( scrollTop == wwTop ){
+                $("#sea").show();
+    
+                $("#W2 img").css({ "top" : "0" , "opacity" : "1" });
+                $("#W2 .web-info").css({ "bottom" : "0" , "opacity" : "1" });
+    
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+            }
+    
+            if ( scrollTop == dTop ){
+                $("#sea").show();
+    
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+    
+            if ( scrollTop == eTop ){
+                $("#sea").show();
+    
+                $("#W1 img").css({ "left" : "-1000px" , "opacity" : "0" });
+                $("#W1 .web-info").css({ "right" : "-1000px" , "opacity" : "0" });
+                $("#W2 img").css({ "top" : "-800px" , "opacity" : "0" });
+                $("#W2 .web-info").css({ "bottom" : "-800px" , "opacity" : "0" });
+            }
+        });
+
         $("#D #big img").click( function(){
             $(this).parent().next().fadeIn();
         });
