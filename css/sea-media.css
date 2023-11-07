@@ -192,7 +192,7 @@
         border-radius: 0 0 10px 10px;
     }
     #M h1{
-        font-size : 3.2rem;
+        font-size : 3rem;
     }
     #M p {
         font-size : 1rem;
@@ -309,6 +309,8 @@
     }
     #W1 , #W2 {
         height : 600px;
+
+        height : 100vh;
     }
     #W1 h2 {
         display : block;
@@ -403,6 +405,8 @@
 
     #D {
         height : 600px;
+
+        height : 100vh;
     }
     #D h2 {
         display : block;
@@ -443,7 +447,8 @@
     }
 
     #E {
-        height : 600px;
+        /* height : 600px; */
+        height : 100vh;
     }
     #E h2 {
         display : block;
