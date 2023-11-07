@@ -32,12 +32,12 @@
     border : 0;
     box-sizing: border-box;
 }
+div.ui-loader  h1, div.ui-loader span { display : none; }
 html, body {
     font-family: 'GmarketSansMedium';
 }
 body {
     overflow : hidden;
-    background : black;
 }
 ::-webkit-scrollbar {
     width : 0px;
@@ -59,11 +59,13 @@ ol, ul {
 #layout {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    overflow-x : hidden;
+    overflow-x : auto;
     height : 100vh;
-    width : 100vw;
-    /* width : 1400px; */
+    /* width : 100vw; */
+    width : 1920px;
     margin: 0 auto;
+
+    background : black;
 }
 /* < 사이드 버튼 > */
 #side {
@@ -121,7 +123,7 @@ ol, ul {
     top : 30px;
     left : 25px;
 
-    z-index: 10;
+    z-index: 15;
     display : none;
 }
 #sea-btn {
@@ -574,7 +576,7 @@ ol, ul {
     margin-left : 25px;
 
     position : relative;
-    right : -500px;
+    right : -1000px;
     opacity : 0;
     transition : ease-in 1.3s;
 }
@@ -690,14 +692,14 @@ ol, ul {
     justify-content: space-between;
 }
 #W2 .web-img {
-    width : 800px !important;
+    width : 800px;
     height : 600px;
     overflow : hidden;
 
     border-radius : 20px;
 }
 #W2 .web-img img {
-    width : 800px !important;
+    width : 800px;
     height : 600px;
 
     position : relative;
@@ -816,7 +818,6 @@ ol, ul {
 #D .background {
     width : 750px;
     height : 600px;
-    background: tan;
 
     position : relative;
 
@@ -824,7 +825,7 @@ ol, ul {
     align-items: center;
     justify-content: center;
 
-    box-shadow : 0 0 150px rgba(255 255 255 / 0.6);
+    box-shadow : 0 0 100px rgba(255 255 255 / 0.6);
 }
 #D button {
     display : block;
@@ -833,6 +834,8 @@ ol, ul {
 #big {
     width : 600px;
     height : 600px;
+
+    position : relative;
 }
 #big button {
     width : 600px;
@@ -875,6 +878,8 @@ ol, ul {
 }
 #small button {
     height : 150px;
+
+    background: none;
 }
 #small button img {
     width : 150px;
@@ -953,8 +958,8 @@ ol, ul {
 }
 #e-web-slide {
     width : 100%;
-    height : 1900px;
-    padding : 0 30px;
+    height : calc( ( 350px + 30px ) * 5 );
+    padding : 0 30px; 
 
     position : relative;
     top : -555px;
@@ -1069,7 +1074,7 @@ ol, ul {
 
 /* < 풋터 / 하단 > */
 #F {
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     height : 15vh;    
     width : 100vw;
     background: black;
@@ -1154,4 +1159,233 @@ ol, ul {
     position : absolute;
     top : 0;
     right : 10pt;
+}
+
+/*  < 1420 ~ 950px까지, 기준은 950px > */
+@media(max-width : 1420px){
+    #sea {
+        width : 200px;
+        height : 250px;
+    }
+    #sea-btn {
+        display : flex;
+        align-items : center;
+        justify-content  : center;
+    }
+    #sea-btn img {
+        width : 200px;
+    }
+    #sea-menu {
+        width : 200px;
+        top : 95px;
+    }
+
+    #side {
+        width : 100px;
+    }
+    #side li {
+        margin : 0;
+        margin-bottom : 15px;
+        padding-right : 5px;
+        width : 100px;
+    }
+    #side .side-txt {
+        width : 50px;
+        padding-right : 10px;
+    }
+    #side li:nth-child(3) .side-txt {
+        transform : translateY(-7px);
+    }
+    #side li:nth-child(4) .side-txt {
+        transform : translateY(-7px);
+    }
+    #side li:nth-child(5) .side-txt {
+        transform : translateY(-8px);
+    }
+    #side .circle {
+        margin : 0;
+    }
+
+    #M h1{
+        font-size : 7rem;
+    }
+
+    #A > h2{
+        top : 40px;
+        left : 240px;
+    }
+    #A > div {
+        width : 950px;
+        padding : 20px;
+    }
+    #about {
+        width : 290px;
+        height : 500px;
+        
+        margin : 0;
+        margin-right : 20px;
+    }
+    #about h2 {
+        font-size : 1.3rem;
+        padding : 12px 10px 8px;
+    }
+    #about h3 {
+        font-size : 1.2rem;
+        margin : 40px 0;
+    }
+    #ab-info {
+        width : 600px;
+        height : 800px;
+        margin-top : 55px;
+        
+        margin-left : 0px;
+    } 
+    #ab-info > div > section h2 {
+        font-size : 1.2rem;        
+    }
+    #left {
+        width : 310px;
+        height :  800px;
+
+        margin-right : 20px;
+    }
+    #left li {
+        font-size : 0.95rem;
+        border-left : 3px solid black;
+    }
+    #profile {
+        height : 280px;
+        margin-bottom : 20px;
+    }
+    #profile div {
+        padding : 15px 20px;
+    }
+
+    #info {
+        height : 500px;
+    }
+    #info ul {
+        margin-top : 35px;
+    }
+    #info h3 {
+        margin-bottom : 0px;
+    }
+    #info div {
+        padding : 20px;
+    }
+    #info li span:last-of-type {
+        margin-left : 5px;
+        font-size : 0.9rem;
+    }
+    #right {
+        width : 270px;
+        height : 800px;
+    }
+    #skill {
+        height : 500px;
+        margin-bottom : 20px;
+    }
+    #progress {
+        padding : 40px 20px 20px;
+    }
+    #progress > div {
+        width : 230px;
+        height : 45px;
+    }
+    #resume {
+        height : 280px;
+    }
+    #resume div {
+        padding : 15px 20px;
+
+        flex-direction : column;
+    }
+    #resume a:first-of-type {
+        margin : 0px;
+        margin-bottom : 5px;
+    }
+    #resume a {
+        width : 250px;
+        height : 100px;
+        margin : 0;
+
+        flex-direction : row;
+    }
+    #resume a img {
+        width : 100px;
+        height : 100px;
+    }
+    #resume a span {
+        margin : 0;
+    }
+
+    /* < 웹디자인 > */
+    #W1 h2, #W2 h2{
+        top : 36px;
+        left : 240px;
+    }
+    #W1 .background ,
+    #W2 .background {
+        width : 910px;
+        height : 800px;
+        margin-top : 80px;
+        padding : 0 15px;
+
+        flex-direction : column;
+    }
+    #W1 .web-img,
+    #W2 .web-img {
+        width : 600px;
+        height : 450px;
+        margin-top : 25px;
+    }
+    #W1 .web-img img,
+    #W2 .web-img img {
+        width : 600px;
+        height : 450px;
+    }
+    #W1 .web-info ,
+    #W2 .web-info {
+        width : 600px;
+        height : 275px;        
+        margin : 25px 0;
+
+        padding-top : 10px;
+    }
+    #W1 .web-info h3,
+    #W2 .web-info h3 {
+        font-size : 1.5rem;
+    }
+    #W1 .web-info p,
+    #W2 .web-info p {
+        font-size : 1rem;
+        margin-top : 4px;
+    }
+    #W1 .web-info hr,
+    #W2 .web-info hr {
+        margin : 10px 0;
+    }
+    #W1  .web-btn,
+    #W2  .web-btn {
+        margin-top : 10px;
+
+        justify-content : start;
+        padding : 0 5px;
+    }
+    #W1  .web-btn a,
+    #W2  .web-btn a {
+        font-size : 0.9rem;
+        padding : 5px 30px 3px;
+        margin-right : 10px;
+    }
+    #W1 .web-info ul li,
+    #W2 .web-info ul li {
+        font-size : 0.9rem;
+        margin-bottom : 4px;
+    }
+    #D > h2 ,
+    #E > h2 {
+        top : 36px;
+        left : 240px;
+    }
 }
