@@ -179,7 +179,7 @@
         overflow-y : auto;
     }
     #layout {
-        overflow : hidden;
+        overflow : initial;
     }
     #sea {
         width : 100vw;
