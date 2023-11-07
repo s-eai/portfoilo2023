@@ -275,6 +275,7 @@ $(document).ready(function(){
         
             clearInterval( ewSlide );
             clearInterval( esSlide );
+            $("#side").hide();
             $("#sea").hide();
             $("#B").fadeIn();
             $("#B h4").text( eventImgAlt );
