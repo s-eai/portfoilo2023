@@ -203,8 +203,6 @@
     #A {
         height : 1780px;
         align-items: start;
-
-        scroll-snap-align: end;
     }
     #A > h2 {
         display : block;
