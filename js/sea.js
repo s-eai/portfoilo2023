@@ -49,7 +49,7 @@ $(document).ready(function(){
     const eTop = $("#E").offset().top;
     let scrollTop = 0;
 
-    if ( winW >= 750 ){
+    if ( winW >= 740 ){
         $("#layout").scroll(function(){
             scrollTop = $("#layout").scrollTop();
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
             if( scrollTop == aTop ){
                 $("#sea").show();
 
-                if( winW > 750 ){
+                if( winW >= 740 ){
                     $("#side").show().css( "display" , "flex" );
                     $("#side li p").hide();
                     $("#side li:nth-child(2) p").show();
@@ -90,7 +90,7 @@ $(document).ready(function(){
             if ( scrollTop == wTop ){
                 $("#sea").show();
 
-                if( winW > 750 ){
+                if( winW >= 740 ){
                     $("#side li p").hide();
                     $("#side li:nth-child(3) p").show();
                     $("#side li a").removeClass("click");
@@ -107,7 +107,7 @@ $(document).ready(function(){
             if ( scrollTop == wwTop ){
                 $("#sea").show();
 
-                if( winW > 750 ){
+                if( winW >= 740 ){
                     $("#side li p").hide();
                     $("#side li:nth-child(3) p").show();
                     $("#side li a").removeClass("click");
@@ -124,7 +124,7 @@ $(document).ready(function(){
             if ( scrollTop == dTop ){
                 $("#sea").show();
 
-                if( winW > 750 ){
+                if( winW >= 740 ){
                     $("#side li p").hide();
                     $("#side li:nth-child(4) p").show();
                     $("#side li a").removeClass("click");
@@ -140,7 +140,7 @@ $(document).ready(function(){
             if ( scrollTop == eTop ){
                 $("#sea").show();
 
-                if( winW > 750 ){
+                if( winW >= 740 ){
                     $("#side li p").hide();
                     $("#side li:nth-child(5) p").show();
                     $("#side li a").removeClass("click");
@@ -405,7 +405,7 @@ $(document).ready(function(){
 
   
 
-    if( 360 <= winW && winW < 740 ){
+    if( 360 <= winW && winW <= 740 ){
         const mTop = $("#M").offset().top;
         const aTop = $("#A").offset().top;
         const wTop = $("#W1").offset().top ; 

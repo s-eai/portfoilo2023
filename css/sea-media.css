@@ -19,6 +19,9 @@
         margin : 0;
         margin-right : 25px;
     }
+    #about h3 b {
+        font-size : 0.9rem;
+    }
     #ab-info {
         width : 475px;
         height : 750px;
@@ -172,7 +175,11 @@
     }
 }  /*  < width 950 ~ 750 > */
 
-
+@media( max-width : 740px ){
+    #D .background {
+        flex-direction : column ;
+    }
+}
 @media ( max-width : 700px ){
     /*  < 700px ~ 360px , 모바일용 , 기준 360px > */
     #sea {
