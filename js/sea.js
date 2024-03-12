@@ -309,7 +309,7 @@ $(document).ready(function(){
         });
     } // < ~ 951 까지 
     // < width가 950 ~ 750 일때 > && < 이벤트 디자인 슬라이드 > 
-    if( 750 <= winW && winW <= 950 ){
+    if( 740 <= winW && winW <= 950 ){
         // < 이벤트-웹 / 위에서 아래 >
         // < 마우스 올리면 슬라이드 멈춤 >
         let ewSlideT = setInterval ( ewSlideDownT , 3500 );

@@ -175,7 +175,7 @@
     }
 }  /*  < width 950 ~ 750 > */
 
-@media( max-width : 740px ){
+@media( max-width : 760px ){
     #D .background {
         flex-direction : column ;
     }
