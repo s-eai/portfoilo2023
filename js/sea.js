@@ -49,7 +49,7 @@ $(document).ready(function(){
     const eTop = $("#E").offset().top;
     let scrollTop = 0;
 
-    if ( winW > 750 ){
+    if ( winW >= 750 ){
         $("#layout").scroll(function(){
             scrollTop = $("#layout").scrollTop();
 
